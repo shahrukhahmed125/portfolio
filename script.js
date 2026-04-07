@@ -102,35 +102,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-// CSS Injection for mobile menu active state
-const style = document.createElement('style');
-style.textContent = `
-    @media (max-width: 768px) {
-        .nav-links.active {
-            display: flex !important;
-            flex-direction: column;
-            position: absolute;
-            top: 70px;
-            left: 0;
-            width: 100%;
-            background: #0a0b0d;
-            padding: 40px;
-            gap: 25px;
-            text-align: center;
-            border-bottom: 1px solid rgba(225, 29, 72, 0.1);
-            animation: slideDown 0.3s ease-out;
-        }
-        
-        @keyframes slideDown {
-            from { transform: translateY(-20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-    }
-    
-    .nav-links a.active {
-        color: #e11d48 !important;
-        font-weight: 600;
-    }
-`;
-document.head.appendChild(style);

@@ -114,6 +114,16 @@ section {
     -webkit-text-fill-color: transparent;
 }
 
+@media (max-width: 768px) {
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    .section-title p {
+        font-size: 1rem;
+    }
+}
+
+
 .section-title p {
     color: var(--text-muted);
     font-size: 1.1rem;
@@ -147,6 +157,13 @@ nav {
     line-height: 1;
     padding-bottom: 5px;
 }
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2rem;
+    }
+}
+
 
 .logo::after {
     content: '';
@@ -217,6 +234,13 @@ nav {
     font-weight: 800;
 }
 
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+}
+
+
 .hero-content h1 span {
     display: block;
     font-size: 2.2rem;
@@ -253,6 +277,32 @@ nav {
     align-items: center;
     min-height: 400px;
 }
+
+@media (max-width: 768px) {
+    .hero-visual {
+        flex-direction: column;
+        height: auto !important;
+        min-height: auto;
+        gap: 15px;
+        padding-top: 20px;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .profile-frame {
+        margin-bottom: 20px;
+    }
+
+    .hero-visual-chips {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+}
+
 
 .profile-frame {
     position: relative;
@@ -310,6 +360,19 @@ nav {
     animation: floatChip 5s infinite ease-in-out;
     transition: var(--transition);
 }
+
+@media (max-width: 768px) {
+    .tech-chip {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        animation: none !important;
+        transform: none !important;
+    }
+}
+
 
 .tech-chip i {
     color: var(--accent);
@@ -582,11 +645,13 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--accent);
     margin-bottom: 25px;
     transition: var(--transition);
+    flex-shrink: 0;
 }
+
 
 .service-card:hover .service-icon {
     background: var(--accent);
@@ -606,13 +671,22 @@ nav {
 /* Contact Section */
 .contact-container {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 60px;
+    grid-template-columns: 100%;
+    gap: 40px;
     background: var(--card-bg);
-    padding: 70px;
+    padding: 30px;
     border-radius: 32px;
     border: 1px solid var(--border-color);
 }
+
+@media (min-width: 1024px) {
+    .contact-container {
+        grid-template-columns: 1fr 1.5fr;
+        padding: 70px;
+        gap: 60px;
+    }
+}
+
 
 .contact-info h3 {
     font-size: 2rem;
@@ -627,14 +701,25 @@ nav {
 
 .contact-card-mini {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
+    text-align: center;
+    gap: 15px;
     background: rgba(30, 41, 59, 0.4);
-    padding: 20px;
+    padding: 25px 20px;
     border-radius: 16px;
     border: 1px solid var(--border-color);
     transition: var(--transition);
 }
+
+@media (min-width: 480px) {
+    .contact-card-mini {
+        flex-direction: row;
+        text-align: left;
+        padding: 20px;
+    }
+}
+
 
 .contact-card-mini:hover {
     background: rgba(34, 211, 238, 0.05);
@@ -681,15 +766,22 @@ nav {
 
 .platform-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 12px;
 }
 
-@media (max-width: 480px) {
+@media (min-width: 600px) {
     .platform-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
+
+@media (min-width: 1100px) {
+    .platform-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 
 .platform-card {
     display: flex;
@@ -725,7 +817,15 @@ nav {
 .social-links-enhanced {
     display: flex;
     gap: 15px;
+    justify-content: center;
 }
+
+@media (min-width: 1024px) {
+    .social-links-enhanced {
+        justify-content: flex-start;
+    }
+}
+
 
 .social-links-enhanced a {
     width: 45px;
@@ -768,6 +868,13 @@ nav {
     border-color: var(--accent);
     background: rgba(15, 23, 42, 0.9);
 }
+
+@media (max-width: 768px) {
+    .contact-info h3 { font-size: 1.6rem; text-align: center; }
+    .freelance-platforms h4 { text-align: center; }
+    .form-group input, .form-group textarea { padding: 15px; font-size: 0.95rem; }
+}
+
 
 /* Footer Section */
 footer {
@@ -857,21 +964,54 @@ footer p {
 @media (max-width: 992px) {
     .hero-content h1 { font-size: 3.5rem; }
     .about-grid { gap: 40px; }
-    .contact-container { padding: 40px; grid-template-columns: 1fr; }
 }
 
+
 @media (max-width: 768px) {
-    section { padding: 80px 5%; }
-    .hero { flex-direction: column-reverse; text-align: center; padding-top: 140px; }
-    .hero-visual { width: 100%; height: 300px; }
+    section { padding: 60px 5%; }
+    .hero { flex-direction: column-reverse; text-align: center; padding-top: 120px; gap: 30px; }
+    .hero-visual { width: 100%; }
     .hero-content { width: 100%; }
-    .hero-btns { justify-content: center; }
+    .hero-btns { justify-content: center; flex-direction: column; gap: 15px; }
+    .btn { width: 100%; }
     .about-grid, .projects-grid, .skills-grid { grid-template-columns: 1fr; }
     .about-image { order: -1; margin-bottom: 40px; }
-    .nav-links { display: none; }
+    .nav-links { 
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 11, 13, 0.98);
+        padding: 40px 5%;
+        gap: 25px;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+    .nav-links.active {
+        display: flex;
+        animation: slideDown 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    @keyframes slideDown {
+        from { transform: translateY(-10px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
     .menu-btn { display: block; }
-    .experience-card { right: 20px; }
+    .experience-card { right: 0; bottom: 20px; padding: 12px 20px; font-size: 0.9rem; }
 }
+
+@media (max-width: 480px) {
+    section { padding: 50px 5%; }
+    .contact-container { padding: 25px; }
+    .hero-content h1 { font-size: 2.2rem; }
+    .about-stats { grid-template-columns: 1fr; gap: 15px; }
+    .stat { text-align: center; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
+    .stat:last-child { border-bottom: none; }
+}
+
 
 /* WhatsApp Float */
 .whatsapp-float {
