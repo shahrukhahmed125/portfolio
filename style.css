@@ -1067,9 +1067,21 @@ footer p {
         padding: 0 4%;
         box-sizing: border-box;
     }
-    .hero-btns { justify-content: center; flex-direction: column; gap: 15px; }
-    .btn { width: 100%; max-width: 280px; }
-    .about-grid, .projects-grid, .skills-grid { grid-template-columns: 1fr; }
+    .hero-btns { 
+        justify-content: center; 
+        flex-direction: column; 
+        gap: 15px; 
+        align-items: center;
+        width: 100%;
+    }
+    .btn { 
+        width: 100%; 
+        max-width: 280px; 
+        text-align: center;
+        padding: 14px 24px;
+        font-size: 16px;
+    }
+    .about-grid, .projects-grid, .skills-grid, .services-grid { grid-template-columns: 1fr; }
     .about-image { order: -1; margin-bottom: 40px; }
     .nav-links { 
         display: none; 
@@ -1124,6 +1136,85 @@ footer p {
     .about-stats { grid-template-columns: 1fr; gap: 15px; }
     .stat { text-align: center; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
     .stat:last-child { border-bottom: none; }
+    
+    /* Contact form button specific styling */
+    .contact-form .btn {
+        width: 100%;
+        max-width: 100%;
+        padding: 16px 24px;
+        font-size: 16px;
+        margin-top: 10px;
+        border-radius: 8px;
+    }
+    
+    /* Service cards mobile optimization */
+    .service-card {
+        padding: 25px 20px;
+        text-align: center;
+    }
+    .service-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    /* Footer responsive styling */
+    footer {
+        padding: 60px 0 30px;
+        margin-top: 80px;
+    }
+    
+    .footer-content {
+        padding: 0 3%;
+        text-align: center;
+    }
+    
+    .footer-logo {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .footer-socials {
+        gap: 25px;
+        margin-bottom: 20px;
+    }
+    
+    .footer-socials a {
+        font-size: 1.2rem;
+    }
+    
+    footer p {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+}
+
+/* Additional mobile footer optimization */
+@media (max-width: 768px) {
+    footer {
+        padding: 70px 0 35px;
+        margin-top: 100px;
+    }
+    
+    .footer-content {
+        padding: 0 4%;
+    }
+    
+    .footer-logo {
+        font-size: 2.8rem;
+        margin-bottom: 25px;
+    }
+    
+    .footer-socials {
+        gap: 30px;
+        margin-bottom: 25px;
+    }
+    
+    footer p {
+        font-size: 0.95rem;
+        margin-bottom: 0;
+    }
 }
 
 

@@ -5,6 +5,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     
+    // 0. Dynamic Year
+    const currentYearElement = document.getElementById('current-year');
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
+    
     // 1. Mobile Menu Toggle
     const menuBtn = document.getElementById('menuBtn');
     const navLinks = document.querySelector('.nav-links');
