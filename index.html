@@ -195,73 +195,241 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="section-title reveal">
-            <h2>Featured Software Projects</h2>
-            <p>A selection of my best work, including CRM systems and eCommerce platforms.</p>
+            <h2>Professional Software Projects</h2>
+            <p>Client-focused solutions and personal projects showcasing full-stack development expertise</p>
         </div>
         <div class="projects-grid">
+            
+            <!-- Construction Management System -->
             <article class="project-card reveal">
                 <div class="project-img">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1426&auto=format&fit=crop" alt="Enterprise CRM System - Laravel Project Preview">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1470&auto=format&fit=crop" alt="Construction Management System Dashboard">
                 </div>
                 <div class="project-content">
-                    <h3>Enterprise CRM System</h3>
-                    <p>A full-scale CRM solution for streamlining business operations and client management using Laravel.</p>
-                    <div class="tags">
-                        <span>Laravel</span>
-                        <span>MySQL</span>
-                        <span>Bootstrap</span>
+                    <h3>Construction Management System</h3>
+                    <p class="project-description">Comprehensive construction project management platform designed to streamline operations, track expenses, and automate reporting for construction companies.</p>
+                    
+                    <div class="project-expanded" style="display: none;">
+                        <div class="project-meta">
+                            <div class="project-role">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Full Stack Developer</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-features">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Real-time project tracking and milestone management</li>
+                                <li>Automated expense tracking and budget monitoring</li>
+                                <li>Professional invoice generation and financial reporting</li>
+                                <li>Multi-user role-based access control</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-tech">
+                            <h4>Tech Stack</h4>
+                            <div class="tags">
+                                <span>Laravel</span>
+                                <span>MySQL</span>
+                                <span>JavaScript</span>
+                                <span>Bootstrap</span>
+                                <span>jQuery</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-links">
+                            <span class="private-badge">
+                                <i class="fas fa-lock"></i>
+                                Private Client Project
+                            </span>
+                            <button class="btn btn-outline btn-small" onclick="showProjectModal('construction')">
+                                Request Demo
+                            </button>
+                        </div>
                     </div>
-                    <a href="#" class="btn-text" aria-label="View Details for Enterprise CRM System">View Details <i class="fas fa-arrow-right"></i></a>
+                    
+                    <button class="read-more-btn" onclick="toggleProjectCard(this)">
+                        <span class="read-more-text">Read More</span>
+                        <span class="read-less-text" style="display: none;">Read Less</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
                 </div>
             </article>
 
+            <!-- CRM System -->
             <article class="project-card reveal">
                 <div class="project-img">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1374&auto=format&fit=crop" alt="Modular eCommerce Furniture Store - Django and React Project Preview">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1470&auto=format&fit=crop" alt="CRM System Analytics Dashboard">
                 </div>
                 <div class="project-content">
-                    <h3>Modular eCommerce Store</h3>
-                    <p>A high-performance furniture store with payment gateway integration and headless architecture.</p>
-                    <div class="tags">
-                        <span>Django</span>
-                        <span>Python</span>
-                        <span>React</span>
+                    <h3>Advanced CRM System</h3>
+                    <p class="project-description">Enterprise-grade Customer Relationship Management system with advanced analytics, customer tracking, and automated workflow management.</p>
+                    
+                    <div class="project-expanded" style="display: none;">
+                        <div class="project-meta">
+                            <div class="project-role">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Full Stack Developer</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-features">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Role-based access control with 5 user levels</li>
+                                <li>Advanced analytics and reporting dashboard</li>
+                                <li>Customer lifecycle management and tracking</li>
+                                <li>Automated email marketing integration</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-tech">
+                            <h4>Tech Stack</h4>
+                            <div class="tags">
+                                <span>Laravel</span>
+                                <span>MySQL</span>
+                                <span>Vue.js</span>
+                                <span>Chart.js</span>
+                                <span>REST API</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-links">
+                            <span class="private-badge">
+                                <i class="fas fa-lock"></i>
+                                Private Client Project
+                            </span>
+                            <button class="btn btn-outline btn-small" onclick="showProjectModal('crm')">
+                                Request Demo
+                            </button>
+                        </div>
                     </div>
-                    <a href="#" class="btn-text" aria-label="View Live Demo for Modular eCommerce Store">Live Demo <i class="fas fa-arrow-right"></i></a>
+                    
+                    <button class="read-more-btn" onclick="toggleProjectCard(this)">
+                        <span class="read-more-text">Read More</span>
+                        <span class="read-less-text" style="display: none;">Read Less</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
                 </div>
             </article>
 
+            <!-- eCommerce Website -->
             <article class="project-card reveal">
                 <div class="project-img">
-                    <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=1471&auto=format&fit=crop" alt="School Management System - PHP Laravel Project Preview">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1374&auto=format&fit=crop" alt="eCommerce Website Product Page">
                 </div>
                 <div class="project-content">
-                    <h3>School Management System</h3>
-                    <p>Automating educational workflows, including payroll, attendance, and result management.</p>
-                    <div class="tags">
-                        <span>PHP</span>
-                        <span>Laravel</span>
-                        <span>Ajax</span>
+                    <h3>eCommerce Platform</h3>
+                    <p class="project-description">Full-featured online shopping platform with secure payment processing, inventory management, and responsive design.</p>
+                    
+                    <div class="project-expanded" style="display: none;">
+                        <div class="project-meta">
+                            <div class="project-role">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Full Stack Developer</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-features">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Stripe payment gateway integration</li>
+                                <li>Real-time inventory management</li>
+                                <li>Advanced product search and filtering</li>
+                                <li>Order tracking and customer dashboard</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-tech">
+                            <h4>Tech Stack</h4>
+                            <div class="tags">
+                                <span>Laravel</span>
+                                <span>MySQL</span>
+                                <span>JavaScript</span>
+                                <span>Stripe API</span>
+                                <span>Bootstrap</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/shahrukhahmed125/ecommerce-demo" target="_blank" class="btn btn-primary btn-small">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                            <a href="#" target="_blank" class="btn btn-outline btn-small">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                        </div>
                     </div>
-                    <a href="#" class="btn-text" aria-label="View Details for School Management System">View Details <i class="fas fa-arrow-right"></i></a>
+                    
+                    <button class="read-more-btn" onclick="toggleProjectCard(this)">
+                        <span class="read-more-text">Read More</span>
+                        <span class="read-less-text" style="display: none;">Read Less</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
                 </div>
             </article>
 
+            <!-- Blog Website -->
             <article class="project-card reveal">
                 <div class="project-img">
-                    <img src="images/medical.png" alt="Medical Inventory System - .NET and C# Project Preview">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1470&auto=format&fit=crop" alt="Blog Website Interface">
                 </div>
                 <div class="project-content">
-                    <h3>Medical Inventory System</h3>
-                    <p>Real-time inventory tracking and automated ordering for pharmaceutical distribution.</p>
-                    <div class="tags">
-                        <span>.NET</span>
-                        <span>C#</span>
-                        <span>SQL Server</span>
+                    <h3>Multi-Language Blog Platform</h3>
+                    <p class="project-description">SEO-optimized blogging platform with multi-language support, content management, and social media integration.</p>
+                    
+                    <div class="project-expanded" style="display: none;">
+                        <div class="project-meta">
+                            <div class="project-role">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Full Stack Developer</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-features">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>SEO-friendly URL structure and meta tags</li>
+                                <li>Multi-language support (English, Urdu, Arabic)</li>
+                                <li>Content management system with rich text editor</li>
+                                <li>Social media sharing and analytics integration</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-tech">
+                            <h4>Tech Stack</h4>
+                            <div class="tags">
+                                <span>Laravel</span>
+                                <span>MySQL</span>
+                                <span>JavaScript</span>
+                                <span>SEO Tools</span>
+                                <span>Bootstrap</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/shahrukhahmed125/blog-platform" target="_blank" class="btn btn-primary btn-small">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                            <a href="#" target="_blank" class="btn btn-outline btn-small">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                        </div>
                     </div>
-                    <a href="#" class="btn-text" aria-label="View Details for Medical Inventory System">View Details <i class="fas fa-arrow-right"></i></a>
+                    
+                    <button class="read-more-btn" onclick="toggleProjectCard(this)">
+                        <span class="read-more-text">Read More</span>
+                        <span class="read-less-text" style="display: none;">Read Less</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
                 </div>
             </article>
+
         </div>
     </section>
 
