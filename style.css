@@ -107,7 +107,9 @@ section {
 
 .btn-outline:hover {
     background: rgba(225, 29, 72, 0.1);
+    border-color: var(--accent);
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(225, 29, 72, 0.2);
 }
 
 .section-title {
@@ -191,16 +193,13 @@ nav {
     color: var(--accent);
 }
 
-.logo:hover {
-    transform: scale(1.05);
-}
-
 .nav-links {
     display: flex;
     gap: 30px;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--accent);
 }
 
@@ -242,6 +241,7 @@ nav {
     -webkit-text-fill-color: transparent;
     line-height: 1;
     font-weight: 800;
+    filter: drop-shadow(0 0 30px rgba(225, 29, 72, 0.2));
 }
 
 @media (max-width: 768px) {
@@ -481,6 +481,23 @@ nav {
 }
 
 /* About Section */
+.about {
+    position: relative;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(225, 29, 72, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+}
+
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -551,6 +568,23 @@ nav {
 }
 
 /* Skills Grid */
+.skills {
+    position: relative;
+}
+
+.skills::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 80%;
+    background: radial-gradient(ellipse at center, rgba(225, 29, 72, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -569,6 +603,7 @@ nav {
     border-color: var(--accent);
     transform: translateY(-10px);
     background: rgba(18, 20, 29, 0.9);
+    box-shadow: 0 15px 30px rgba(225, 29, 72, 0.1);
 }
 
 .skill-category h3 {
@@ -599,6 +634,22 @@ nav {
 }
 
 /* Projects Section */
+.projects {
+    position: relative;
+}
+
+.projects::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    right: 0;
+    width: 50%;
+    height: 60%;
+    background: radial-gradient(ellipse at center, rgba(225, 29, 72, 0.04) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -616,6 +667,12 @@ nav {
     height: 100%;
 }
 
+.project-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(225, 29, 72, 0.15);
+}
+
 .project-img {
     height: 220px;
     overflow: hidden;
@@ -627,6 +684,10 @@ nav {
     height: 100%;
     object-fit: cover;
     transition: var(--transition);
+}
+
+.project-card:hover .project-img img {
+    transform: scale(1.05);
 }
 
 .project-content {
@@ -822,6 +883,22 @@ nav {
 }
 
 /* Services Grid */
+.services {
+    position: relative;
+}
+
+.services::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 50%;
+    background: radial-gradient(ellipse at center, rgba(225, 29, 72, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -844,12 +921,13 @@ nav {
     background: var(--secondary-bg);
     border-color: var(--accent);
     transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(225, 29, 72, 0.15);
 }
 
 .service-icon {
     width: 70px;
     height: 70px;
-    background: rgba(34, 211, 238, 0.1);
+    background: rgba(225, 29, 72, 0.1);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -1076,6 +1154,7 @@ nav {
 .form-group input:focus, .form-group textarea:focus {
     border-color: var(--accent);
     background: rgba(15, 23, 42, 0.9);
+    box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.1);
 }
 
 @media (max-width: 768px) {
